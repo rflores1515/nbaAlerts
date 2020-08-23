@@ -36,9 +36,9 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "Twilio": {
+            "Twilio.AspNet.Core": {
               "target": "Package",
-              "version": "[*, )"
+              "version": "[5.33.1, )"
             }
           },
           "imports": [
