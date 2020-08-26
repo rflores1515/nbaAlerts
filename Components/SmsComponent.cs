@@ -8,7 +8,6 @@ namespace  nbaAlerts.Components
 
     public class SmsComponent : ISmsComponent
     {
-        
         public SmsComponent()
         {
             
