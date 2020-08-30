@@ -17,7 +17,7 @@ namespace TwilioReceive.Controllers
             var messagingResponse = new MessagingResponse();
             // messagingResponse.Message("The copy cat says: " +
             //                           incomingMessage.Body);
-            _smsComponent.GetTeamSchedule(incomingMessage.Body);
+            _smsComponent.GetTeamData(incomingMessage.Body);
             
 
             return TwiML(messagingResponse);

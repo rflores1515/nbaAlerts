@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using nbaAlerts.Components;
+using nbaAlerts.Integration.Sports;
 
 namespace nbaAlerts
 {
@@ -26,6 +27,8 @@ namespace nbaAlerts
         {
             services.AddControllersWithViews();
             services.AddScoped<ISmsComponent, SmsComponent>();
+            services.AddScoped<ISportsClient, SportsClient>();
+            services.AddScoped<ISportsService, SportsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
