@@ -1,20 +1,23 @@
+using nbaAlerts.Integration.Sports;
+
 namespace  nbaAlerts.Components 
 {
     public interface ISmsComponent
     {
-        void GetTeamSchedule(string body);
+        void GetTeamData(string body);
     }
 
 
     public class SmsComponent : ISmsComponent
     {
-        public SmsComponent()
+        private readonly ISportsService _sportsService;
+        public SmsComponent(ISportsService sportsService)
         {
-            
+            _sportsService = sportsService;
         }
-        public void GetTeamSchedule(string body)
+        public void GetTeamData(string body)
         {
-            throw new System.NotImplementedException();
+            _sportsService.GetTeamData(body);
         }
     }
 }
