@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\nbaAlerts\\nbaAlerts.csproj": {}
+    "C:\\Projects\\nbaAlerts\\nba.alerts\\nbaAlerts.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\nbaAlerts\\nbaAlerts.csproj": {
+    "C:\\Projects\\nbaAlerts\\nba.alerts\\nbaAlerts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\nbaAlerts\\nbaAlerts.csproj",
+        "projectUniqueName": "C:\\Projects\\nbaAlerts\\nba.alerts\\nbaAlerts.csproj",
         "projectName": "nbaAlerts",
-        "projectPath": "C:\\Projects\\nbaAlerts\\nbaAlerts.csproj",
+        "projectPath": "C:\\Projects\\nbaAlerts\\nba.alerts\\nbaAlerts.csproj",
         "packagesPath": "C:\\Users\\rdj23\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\nbaAlerts\\obj\\",
+        "outputPath": "C:\\Projects\\nbaAlerts\\nba.alerts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rdj23\\AppData\\Roaming\\NuGet\\NuGet.Config"
