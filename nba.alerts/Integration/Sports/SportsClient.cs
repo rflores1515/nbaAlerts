@@ -12,8 +12,8 @@ namespace nbaAlerts.Integration.Sports
 
     public class SportsClient : ISportsClient
     {
-        private const string BaseUrl = "http://site.api.espn.com/";
-        private const string GetDataUrl = "apis/site/v2/sports/basketball/nba/scoreboard";
+        private const string BaseUrl = "https://www.balldontlie.io/api/v1/";
+        private const string GetTeamDataUrl = "/games";
         private readonly RestClient client;
         public SportsClient()
         {
@@ -21,7 +21,7 @@ namespace nbaAlerts.Integration.Sports
         }
         public void GetTeamData(string teamName)
         {
-            RestRequest request = new RestRequest(GetDataUrl, Method.GET);
+            RestRequest request = new RestRequest(GetTeamDataUrl, Method.GET);
             var response = client.Execute(request);
             var teamData = JObject.Parse(response.Content);
         }
