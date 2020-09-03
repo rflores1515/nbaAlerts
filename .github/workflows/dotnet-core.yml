@@ -18,7 +18,7 @@ jobs:
       with:
         dotnet-version: 3.1
     - name: Install dependencies
-      run: dotnet restore "nbaAlerts.csproj"
+      run: dotnet restore nbaAlerts
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: Test
