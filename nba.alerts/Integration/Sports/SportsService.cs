@@ -1,8 +1,10 @@
+using nbaAlerts.Entities;
+
 namespace nbaAlerts.Integration.Sports 
 {
     public interface ISportsService 
     {
-        public void GetTeamData(string team);
+        public Root GetTeamData(int teamId);
     }
 
     public class SportsService : ISportsService
@@ -12,9 +14,11 @@ namespace nbaAlerts.Integration.Sports
         {
             _sportsClient = sportsClient;
         }
-        public void GetTeamData(string team)
+        public Root GetTeamData(int teamId)
         {
-            _sportsClient.GetTeamData(team);
+            var teamData = _sportsClient.GetTeamData(teamId);
+
+            return teamData;
         }
     }
 }

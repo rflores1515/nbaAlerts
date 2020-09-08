@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using RestSharp;
@@ -6,7 +7,7 @@ namespace nbaAlerts.Integration.Sports
 {
     public interface ISportsClient
     {
-        public void GetTeamData(string teamName);
+        public Root GetTeamData(int id, string season = "2019");
     }
 
 
@@ -19,11 +20,14 @@ namespace nbaAlerts.Integration.Sports
         {
             client = new RestClient(BaseUrl); 
         }
-        public void GetTeamData(string teamName)
+        public Root GetTeamData(int id, string season = "2019")
         {
             RestRequest request = new RestRequest(GetTeamDataUrl, Method.GET);
-            var response = client.Execute(request);
-            var teamData = JObject.Parse(response.Content);
+            request.AddQueryParameter("team_ids[]", id.ToString());
+            request.AddQueryParameter("seasons[]", season);
+            request.AddQueryParameter("postseason", "true");
+            var response = client.Execute<Root>(request);
+            return response.Data;
         }
     }
 }
