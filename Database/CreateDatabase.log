@@ -1,0 +1,36 @@
+ERROR executing: "CREATE DATABASE [nbaAlerts]" 
+ERROR executing: "CREATE DATABASE [nbaAlerts]" 
+ERROR executing: "CREATE DATABASE [nbaAlerts]" 
+ERROR executing: "CREATE DATABASE [nbaAlerts]" 
+ERROR executing: "CREATE DATABASE [nbaAlerts]" 
+ERROR executing: "CREATE DATABASE [nbaAlerts]" 
+ERROR executing: "CREATE DATABASE [nbaAlerts]" 
+ERROR executing: "CREATE DATABASE [nbaAlerts]" 
+ 
+Creating the schema 
+****************************************************************************** 
+ 
+Creating Functions 
+****************************************************************************** 
+ 
+Creating views 
+****************************************************************************** 
+ 
+Creating stored procedures 
+****************************************************************************** 
+ 
+Populating configuration data 
+****************************************************************************** 
+ 
+Adding triggers 
+****************************************************************************** 
+ 
+Adding indexes 
+****************************************************************************** 
+ 
+Adding constraints 
+****************************************************************************** 
+ 
+Populating unit test data 
+****************************************************************************** 
+Script executed successfully 

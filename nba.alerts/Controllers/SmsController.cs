@@ -15,10 +15,8 @@ namespace TwilioReceive.Controllers
         public TwiMLResult Index(SmsRequest incomingMessage)
         {
             var messagingResponse = new MessagingResponse();
-            // messagingResponse.Message("The copy cat says: " +
-            //                           incomingMessage.Body);
-            _smsComponent.GetTeamData(incomingMessage.Body);
-            
+            var score = _smsComponent.GetRecentScore(incomingMessage.Body);
+            messagingResponse.Message(score);
 
             return TwiML(messagingResponse);
         }
