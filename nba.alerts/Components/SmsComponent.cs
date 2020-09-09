@@ -25,14 +25,19 @@ namespace  nbaAlerts.Components
         public string GetRecentScore(string body)
         {
             var teamData = GetTeamData(body);
-            var scoreData = teamData.data.Where(x => x.home_team_score > 0).OrderByDescending(x => x.date).FirstOrDefault();
+            var scoreData = GetLatestGame(teamData);
             var formatedScore = FormatedScore(scoreData);
             return formatedScore;
         }
 
+        private Datum GetLatestGame(Root teamData)
+        {
+            return teamData.data.Where(x => x.home_team_score > 0).OrderByDescending(x => x.date).FirstOrDefault();
+        }
+
         private string FormatedScore(Datum scoreData)
         {
-            return String.Format("{0} {1} {2} {3}", scoreData.home_team.name, scoreData.home_team_score, scoreData.visitor_team.name, scoreData.visitor_team_score);
+            return $"{scoreData.home_team.name} {scoreData.home_team_score} {scoreData.visitor_team.name} {scoreData.visitor_team_score}";
         }
 
         public Root GetTeamData(string teamName)
